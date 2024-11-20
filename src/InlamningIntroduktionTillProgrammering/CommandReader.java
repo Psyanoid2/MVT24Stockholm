@@ -11,11 +11,11 @@ public class CommandReader {
         //Kontrollerar stopp och fortsätter annars.
         while (true) {
             String rad = scanner.nextLine();
-            if (statistik.isSTOPP(rad)) {
+            if (statistik.isSTOP(rad)) {
                 System.out.println("Programmet avslutas");
                 break;
             } else {
-                statistik.laggTillRad(rad);
+                statistik.Addrow(rad);
             }
 
         }
@@ -23,8 +23,8 @@ public class CommandReader {
 
         //Skriver ut resultatet efter att vi skrivit STOPP. (Exkluderar STOPP)
         System.out.println("Resultat (STOPP exkluderat)");
-        System.out.println("Antal tecken: " + statistik.getAntalTecken());
-        System.out.println("Antal rader: " + statistik.getAntalRader());
+        System.out.println("Antal tecken: " + statistik.getAmountOfCharacters());
+        System.out.println("Antal rader: " + statistik.getAmountOfRows());
 
     }
 

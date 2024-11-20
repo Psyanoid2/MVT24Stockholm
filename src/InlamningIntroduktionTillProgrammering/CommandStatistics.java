@@ -1,57 +1,57 @@
 package InlamningIntroduktionTillProgrammering;
 
 public class CommandStatistics {
-    private int antalTecken;
-    private int antalRader;
-    private int antalOrd;
-    private String langstaOrd;
+    private int AmountOfCharacters;
+    private int AmountOfRows;
+    private int AmountOfWords;
+    private String LongestWord;
 
     public CommandStatistics() {
-        this.antalTecken = 0;
-        this.antalRader = 0;
-        this.antalOrd = 0;
-        this.langstaOrd = "";
+        this.AmountOfCharacters = 0;
+        this.AmountOfRows = 0;
+        this.AmountOfWords = 0;
+        this.LongestWord = "";
     }
 
     //Metod uppdatera statistik
-    public void laggTillRad(String rad) {
-        antalTecken += rad.length();
-        antalRader++;
+    public void Addrow(String rad) {
+        AmountOfCharacters += rad.length();
+        AmountOfRows++;
 
         // Dela upp raden i ord baserat på mellanslag
-        String[] ordArray = rad.split("\\s+");
-        antalOrd += ordArray.length;
+        String[] wordArray = rad.split("\\s+");
+        AmountOfWords += wordArray.length;
 
         // Kontrollera längden på varje ord för att hitta det längsta
-        for (String ord : ordArray) {
-            if (ord.length() > langstaOrd.length()) {
-                langstaOrd = ord;
+        for (String word : wordArray) {
+            if (word.length() > LongestWord.length()) {
+                LongestWord = word;
             }
         }
     }
 
     // Metod kontrollera "STOPP"
-    public boolean isSTOPP(String rad) {
+    public boolean isSTOP(String rad) {
         return rad.equalsIgnoreCase("STOPP");
     }
 
     //Metod hämta antal tecken
-    public int getAntalTecken(){
-        return antalTecken;
+    public int getAmountOfCharacters(){
+        return AmountOfCharacters;
     }
 
     //metod hämta antal rader
-    public int getAntalRader(){
-        return antalRader;
+    public int getAmountOfRows(){
+        return AmountOfRows;
     }
 
     // Metod för att hämta antalet ord
-    public int getAntalOrd() {
-        return antalOrd;
+    public int getAmountOfWords() {
+        return AmountOfWords;
     }
 
     // Metod för att hämta det längsta ordet
-    public String getLangstaOrd() {
-        return langstaOrd;
+    public String getLongestWord() {
+        return LongestWord;
     }
 }
