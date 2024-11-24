@@ -8,7 +8,7 @@ public class CommandReader {
 
         System.out.println("Skriv in text rad för rad (Skriv 'STOPP' för att avsluta):");
 
-        //Kontrollerar stopp och fortsätter annars.
+        //Kontrollerar stopp och fortsätter utan stopp.
         while (true) {
             String rad = scanner.nextLine();
             if (statistik.isSTOP(rad)) {

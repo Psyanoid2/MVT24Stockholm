@@ -6,6 +6,7 @@ public class CommandStatistics {
     private int AmountOfWords;
     private String LongestWord;
 
+    // Konstruktor för att initiera statistik med standardvärden.
     public CommandStatistics() {
         this.AmountOfCharacters = 0;
         this.AmountOfRows = 0;
