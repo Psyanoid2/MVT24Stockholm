@@ -26,6 +26,7 @@ public class CommandReader {
         System.out.println("Antal tecken: " + statistik.getAmountOfCharacters());
         System.out.println("Antal rader: " + statistik.getAmountOfRows());
 
+        
     }
 
 }

@@ -12,6 +12,7 @@ public class CommandStatistics {
         this.AmountOfRows = 0;
         this.AmountOfWords = 0;
         this.LongestWord = "";
+        //this.Longestwordlength
     }
 
     //Metod uppdatera statistik
@@ -27,7 +28,9 @@ public class CommandStatistics {
         for (String word : wordArray) {
             if (word.length() > LongestWord.length()) {
                 LongestWord = word;
+                //longestwordlength ^
             }
+            //if-sats kontrollera FAKTISKT längst ord == word?
         }
     }
 

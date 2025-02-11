@@ -22,7 +22,7 @@ public class JunitTest {
     public void testTeckenOchRad() {
         CommandStatistics statistik = new CommandStatistics();
 
-        statistik.Addrow("Testa detta"); // 10 tecken
+        statistik.Addrow("Testa detta"); // 11 tecken
         assertEquals(11, statistik.getAmountOfCharacters(), "Antalet tecken borde vara 11");
         assertEquals(1, statistik.getAmountOfRows(), "Antalet rader borde vara 1");
     }
@@ -48,5 +48,7 @@ public class JunitTest {
         assertEquals(35, statistik.getAmountOfCharacters(), "Antalet tecken borde vara 35 efter tre rader");
         assertEquals(3, statistik.getAmountOfRows(), "Antalet rader borde vara 3 efter tre rader");
         assertEquals(6, statistik.getAmountOfWords(), "Antalet ord borde vara 6 efter tre rader");
+        assertEquals("Första", statistik.getLongestWord(), "Det längsta ordet borde vara 'Första'");
+        //assertEquals("Första Tredje", statistik.getLongestWord(), "Det längsta ordet borde vara 'Första'");
     }
 }
