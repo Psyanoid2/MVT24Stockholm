@@ -3,7 +3,6 @@ package MORSEKOD;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-// Testklass för att testa MorseLogic med JUnit
 public class MorseTest {
 
     @Test

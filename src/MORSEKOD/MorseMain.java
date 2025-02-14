@@ -2,7 +2,6 @@ package MORSEKOD;
 
 import java.util.Scanner;
 
-// Klass som hanterar huvudprogrammet och användarinteraktionen
 public class MorseMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
